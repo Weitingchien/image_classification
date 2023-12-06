@@ -1,0 +1,60 @@
+NIN_mnist.py: 
+
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 224, 224, 1)]     0         
+                                                                 
+ conv1 (Conv2D)              (None, 56, 56, 96)        11712     
+                                                                 
+ conv1_mlp1 (Conv2D)         (None, 56, 56, 96)        9312      
+                                                                 
+ conv1_mlp2 (Conv2D)         (None, 56, 56, 96)        9312      
+                                                                 
+ pool1 (MaxPooling2D)        (None, 28, 28, 96)        0         
+                                                                 
+ conv2 (Conv2D)              (None, 28, 28, 256)       614656    
+                                                                 
+ conv2_mlp1 (Conv2D)         (None, 28, 28, 256)       65792     
+                                                                 
+ conv2_mlp2 (Conv2D)         (None, 28, 28, 256)       65792     
+                                                                 
+ pool2 (MaxPooling2D)        (None, 14, 14, 256)       0         
+                                                                 
+ conv3 (Conv2D)              (None, 14, 14, 384)       885120    
+                                                                 
+ conv3_mlp1 (Conv2D)         (None, 14, 14, 384)       147840    
+                                                                 
+ conv3_mlp2 (Conv2D)         (None, 14, 14, 384)       147840    
+                                                                 
+ pool3 (MaxPooling2D)        (None, 7, 7, 384)         0         
+                                                                 
+ global_avg_pool (GlobalAve  (None, 384)               0         
+ ragePooling2D)                                                  
+                                                                 
+ predictions (Activation)    (None, 384)               0         
+                                                                 
+=================================================================
+Total params: 1957376 (7.47 MB)
+Trainable params: 1957376 (7.47 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Epoch 1/10
+938/938 [==============================] - 590s 628ms/step - loss: 0.8454 - accuracy: 0.7549 - val_loss: 0.1836 - val_accuracy: 0.9432
+Epoch 2/10
+938/938 [==============================] - 581s 620ms/step - loss: 0.1025 - accuracy: 0.9686 - val_loss: 0.0725 - val_accuracy: 0.9779
+Epoch 3/10
+938/938 [==============================] - 581s 620ms/step - loss: 0.0667 - accuracy: 0.9799 - val_loss: 0.0672 - val_accuracy: 0.9766
+Epoch 4/10
+938/938 [==============================] - 585s 624ms/step - loss: 0.0577 - accuracy: 0.9818 - val_loss: 0.0475 - val_accuracy: 0.9849
+Epoch 5/10
+938/938 [==============================] - 581s 619ms/step - loss: 0.0465 - accuracy: 0.9856 - val_loss: 0.0672 - val_accuracy: 0.9771
+Epoch 6/10
+938/938 [==============================] - 578s 616ms/step - loss: 0.0439 - accuracy: 0.9865 - val_loss: 0.0337 - val_accuracy: 0.9889
+Epoch 7/10
+938/938 [==============================] - 584s 622ms/step - loss: 0.0387 - accuracy: 0.9880 - val_loss: 0.0361 - val_accuracy: 0.9881
+Epoch 8/10
+938/938 [==============================] - 599s 638ms/step - loss: 0.0341 - accuracy: 0.9893 - val_loss: 0.0302 - val_accuracy: 0.9902
+Epoch 9/10
+938/938 [==============================] - 576s 614ms/step - loss: 0.0313 - accuracy: 0.9905 - val_loss: 0.0349 - val_accuracy: 0.9902
+Epoch 10/10
+938/938 [==============================] - 580s 618ms/step - loss: 0.0272 - accuracy: 0.9915 - val_loss: 0.0647 - val_accuracy: 0.9786
